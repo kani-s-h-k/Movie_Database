@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=Karla:ital,wght@0,200;1,200&family=Merriweather+Sans:wght@300&family=Nunito:wght@200;300&family=Playfair+Display&family=Roboto+Mono:wght@200&family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=Karla:ital,wght@0,200;1,200&family=Merriweather+Sans:wght@300&family=Nunito:wght@200;300&family=Playfair+Display&family=Roboto+Mono:wght@200&family=Roboto:wght@100&family=Syne:wght@500&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=Karla:ital,wght@0,200;1,200&family=Merriweather+Sans:wght@300&family=Nunito:wght@200;300&family=PT+Serif:wght@700&family=Playfair+Display&family=Roboto+Mono:wght@200&family=Roboto:wght@100&family=Syne:wght@500&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400&family=Karla:ital,wght@0,200;1,200&family=Merriweather+Sans:wght@300&family=Montserrat:wght@900&family=Nunito:wght@200;300&family=PT+Serif:wght@700&family=Playfair+Display&family=Roboto+Mono:wght@200&family=Roboto:wght@100&family=Syne:wght@500&family=Ubuntu:wght@300&display=swap');
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  width: 100vw;
+  background-color: transparent;
+}
+
+.topContent {
+  display: flex;
+  height: 83vh;
+  width: 100vw;
+  flex-direction: column;
+  margin-top: 5vh;
+  overflow-y: hidden;
+}
+
+.barcontainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 15%;
+  z-index: 100;
+}
+
+body {
+  margin: 0;
+
+  overflow-x: hidden;
+  padding: 0;
+}
+
+.websitename {
+  font-family: 'Syne', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(51, 51, 51, 0.75);
+
+}
+
+.trendingMovies {
+  display: flex;
+  height: 99vh;
+  width: 84%;
+  margin-left: 10px;
+}
+
+.myDropdown {
+  background-color: black;
+  text-align: center;
+  font-size: 13px;
+  width: max-content;
+}
+
+.dropdownItems {
+  color: white;
+
+}
+
+.navTitles {
+  padding: 6px;
+  text-shadow: 1px 1px 2px black;
+  font-size: 15px;
+  letter-spacing: -0.5px;
+  margin-left: 4px;
+  font-family: 'Syne', sans-serif;
+
+}
+
+.titlecontainer {
+  margin-right: 8px;
+}
+
+.socialmediaicons {
+  list-style: none;
+  margin: 10px;
+}
+
+.genreRatingContainer {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin: 5vh 5vh 1vh 5vh;
+}
+
+.genrecontainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3vh;
+
+
+}
+
+.genres {
+  font-size: 14px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-right: 4vh;
+  font-family: 'Syne', sans-serif;
+}
+
+.gerneANDratingheading {
+  font-size: 11px;
+  color: grey;
+  font-weight: normal !important;
+  font-family: 'Syne', sans-serif !important;
+}
+
+.rating {
+  font-size: 2rem;
+  font-family: 'PT Serif', serif;
+}
+
+.moviename {
+  font-size: 6.5rem;
+  color: white;
+  margin: 0vh 2vh 3vh 5vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.moviesummary {
+  width: 60%;
+  color: white;
+  font-size: 16px;
+  margin-left: 5vh;
+  font-family: 'Syne', sans-serif;
+  margin-bottom: 5vh;
+}
+
+.watchthetrailer {
+  color: white;
+  font-size: 11px;
+  margin-left: 1vh;
+  font-family: 'Syne', sans-serif;
+  font-weight: lighter;
+}
+
+.rowContainer {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  display: flex;
+}
+
+.movieRow {
+  display: flex;
+  flex-direction: row;
+  height: max-content;
+  width: 100%;
+  padding: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.movieRow::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselArrow {
+  position: absolute;
+  top: 35%;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.carouselArrow.left {
+  left: -10px;
+}
+
+.carouselArrow.right {
+  right: -10px;
+}
+
+.posterPlaceholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  background: #222;
+  color: #999;
+  font-family: 'Syne', sans-serif;
+  min-height: 12rem;
+}
+
+.slideblocks {
+  height: 84vh;
+  margin-right: 5vh;
+  min-width: 22.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headings {
+  padding: 5px;
+  margin-top: 5vh;
+  font-size: 1.5rem;
+  font-family: 'Syne', sans-serif;
+}
+
+.subscribePara {
+  font-size: 13px;
+  font-weight: bolder !important;
+}
+
+.footerListTitles {
+  list-style: none;
+  font-size: 14px;
+  color: grey;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+/* Styling Movie Page  */
+
+.MPHeading {
+  font-size: clamp(2rem, 5vw, 5rem);
+  overflow-wrap: anywhere;
+}
+
+.MPContainer {
+
+  height: max-content;
+  margin-top: 3vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1vh;
+  align-items: center;
+  color: black;
+}

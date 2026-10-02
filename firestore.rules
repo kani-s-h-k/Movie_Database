@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Watchlist entries live in the "movies" collection. Each document is named
+    // "<uid>_<mediaType>_<tmdbId>" and stores the owner's uid, so users can only
+    // read, create and delete their own entries.
+    match /movies/{docId} {
+      allow get, delete: if request.auth != null
+                         && docId.matches(request.auth.uid + '_.*');
+
+      // The watchlist page queries with where("uid", "==", <current uid>).
+      allow list: if request.auth != null
+                  && resource.data.uid == request.auth.uid;
+
+      allow create: if request.auth != null
+                    && docId.matches(request.auth.uid + '_.*')
+                    && request.resource.data.uid == request.auth.uid;
+
+      allow update: if false;
+    }
+  }
+}
